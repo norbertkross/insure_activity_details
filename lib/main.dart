@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insure_activity_details/beneficiaries/beneficiaryHome.dart';
 import 'package:insure_activity_details/insureranceAgent/activityBoard.dart';
 import 'package:insure_activity_details/insureranceAgent/agentProfile.dart';
 
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home:
-       ActivityBoard()
+      BeneficiaryHome()
+       //ActivityBoard(),
        //AgentProfile(),
     );
   }
