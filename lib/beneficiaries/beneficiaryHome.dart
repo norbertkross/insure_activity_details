@@ -12,7 +12,7 @@ class _BeneficiaryHomeState extends State<BeneficiaryHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      //backgroundColor: Color(0xffFFFFFF),
       // appBar: AppBar(
       //   leading: Icon(Icons.close),
       //   centerTitle: true,
@@ -122,7 +122,7 @@ class _BeneficiaryHomeState extends State<BeneficiaryHome> {
                       color: Theme.of(context).disabledColor.withOpacity(.07),
                     ),
                   ),      
-                  SizedBox(height: 16.0,),
+                  SizedBox(height: 12.0,),
                       sliddely(i),
                     ],
                   )
@@ -145,14 +145,17 @@ class _BeneficiaryHomeState extends State<BeneficiaryHome> {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
-                color: Color(0xff8cfbc3),
+                color: i%3 ==1? Theme.of(context).disabledColor: Color(0xff8cfbc3),
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 12.0,
                   vertical: 4.0,
                 ),
-                child: Text("Otto Knows"),
+                child: Text("Otto Knows",style: TextStyle(
+                  color: Theme.of(context).canvasColor,
+                  fontWeight: FontWeight.bold
+                ),),
               ),
             ),
           ),
