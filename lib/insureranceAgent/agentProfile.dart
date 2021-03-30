@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:insure_activity_details/beneficiaries/agentDetails.dart';
+import 'package:insure_activity_details/beneficiaries/beneficiaryHome.dart';
+import 'package:insure_activity_details/beneficiaries/businessDetails.dart';
+import 'package:insure_activity_details/insureranceAgent/activityBoard.dart';
 
 
 class AgentProfile extends StatefulWidget {
@@ -9,56 +13,71 @@ class AgentProfile extends StatefulWidget {
 
 class _AgentProfileState extends State<AgentProfile> {
 
+  goto(Widget page){
+    Navigator.of(context).push(MaterialPageRoute(builder: (builder)=>page));
+  }
+
 double size = 140.0;
 String image = "assets/lady.jpg";
 String notifications = "2";
 String messages = "5";
 int numOfItems = 7;
+
+
 List optionItems = [
   {"name":"ACCOUNTS",
    "icon":"assets/User Group Man Woman_96px.png",
-   "ontap":(){},
+   "ontap":BusinessDetails(),
   },
   {"name":"CONTACTS",
    "icon":"assets/Address Book_96px.png",
-   "ontap":(){},
+   "ontap":AgentDetails(),
   },
   {"name":"ACTIVITIES",
    "icon":"assets/Workflow_80px.png",
-   "ontap":(){},   
+   "ontap":ActivityBoard(),   
   },
   {"name":"REPORT",
    "icon":"assets/Ratings_80px.png",
-   "ontap":(){},   
+   "ontap":BeneficiaryHome(),   
   },
   {"name":"CALENDER",
    "icon":"assets/Tear Off Calendar_96px.png",
-   "ontap":(){},   
+   "ontap":Scaffold(appBar: AppBar(
+     leading: IconButton(icon: Icon(Icons.chevron_left), onPressed: ()=>{},),
+   ),),   
   },
   {"name":"SETTINGS",
    "icon":"assets/Settings 3_96px.png",
-   "ontap":(){},   
+   "ontap":Scaffold(appBar: AppBar(
+     leading: IconButton(icon: Icon(Icons.chevron_left), onPressed: ()=>{},),
+   ),),   
   },
   {"name":"FAQs",
    "icon":"assets/FAQ_96px.png",
-   "ontap":(){},   
+   "ontap":Scaffold(appBar: AppBar(
+     leading: IconButton(icon: Icon(Icons.chevron_left), onPressed: ()=>{},),
+   ),),  
   },
   {"name":"HELP",
    "icon":"assets/Assistant_80px.png",
-   "ontap":(){},   
+   "ontap":Scaffold(appBar: AppBar(
+     leading: IconButton(icon: Icon(Icons.chevron_left), onPressed: ()=>{},),
+   ),),   
   },
   {"name":"ABOUT US",
    "icon":"assets/Library_96px.png",
-   "ontap":(){},   
+   "ontap":Scaffold(appBar: AppBar(
+     leading: IconButton(icon: Icon(Icons.chevron_left), onPressed: ()=>{},),
+   ),),   
   },
   ];
-
 
 @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    //SystemChrome.setEnabledSystemUIOverlays([]);
 
   }
 
@@ -330,7 +349,7 @@ List optionItems = [
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GestureDetector(
-                  onTap:optionItems[j]!=null? optionItems[j]["ontap"] : (){},
+                  onTap:(){goto(optionItems[j]!=null? optionItems[j]["ontap"] : Container());},
                   child: Card(
                     elevation: 20.0,
                   margin: EdgeInsets.all(0),

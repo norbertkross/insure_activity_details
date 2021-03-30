@@ -45,7 +45,7 @@ class _AgentDetailsState extends State<AgentDetails> {
         centerTitle: true,
         title: Text("Agent Details"),
       leading: IconButton(icon: Icon(Icons.chevron_left_rounded), 
-      onPressed: ()=>{},
+      onPressed: ()=>{Navigator.pop(context)},
       ),
       ),
       body: NotificationListener<OverscrollIndicatorNotification>(

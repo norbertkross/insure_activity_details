@@ -25,11 +25,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home:
-        BusinessDetails(), 
+        //BusinessDetails(), 
         //AgentDetails(), 
-      //BeneficiaryHome(),
-       //ActivityBoard(),
-       //AgentProfile(),
+        //BeneficiaryHome(),
+        //ActivityBoard(),
+       AgentProfile(),
     );
   }
 }

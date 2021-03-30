@@ -20,7 +20,7 @@ DateTime daySelected = DateTime.now();
 @override
 void initState() {
   super.initState();
-      SystemChrome.setEnabledSystemUIOverlays([]);
+      //SystemChrome.setEnabledSystemUIOverlays([]);
   _calendarController = CalendarController();
 }
 
@@ -60,7 +60,9 @@ void dispose() {
         ),
         elevation: 0.0,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        leading: Icon(Icons.edit_location_sharp,color: Colors.redAccent,size: 35,),
+        leading: IconButton(icon: Icon(Icons.chevron_left,size: 35,color: Colors.redAccent,), 
+        onPressed: (){Navigator.pop(context);}),
+        // Icon(Icons.edit_location_sharp,color: Colors.redAccent,size: 35,),
         actions: [
           
           //  Notification Icons

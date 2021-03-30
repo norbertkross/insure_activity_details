@@ -29,10 +29,13 @@ class _BeneficiaryHomeState extends State<BeneficiaryHome> {
               height: 4.0,
             ),
             ListTile(
-              leading: Icon(
-                    Icons.close,
-                    size: 30.0,
-                  ),
+              leading: GestureDetector(
+                onTap: (){Navigator.pop(context);},
+                child: Icon(
+                      Icons.close,
+                      size: 30.0,
+                    ),
+              ),
               title: Text(
                 "Transfer to",
                 style: TextStyle(
@@ -178,7 +181,7 @@ class _BeneficiaryHomeState extends State<BeneficiaryHome> {
                   padding: const EdgeInsets.symmetric(
                   horizontal: 12.0, vertical: 0.0),
                   child: Text(
-                    "FRI 2021 03 31 78XXXXXXXXXXXX32",
+                    "FRI 2021 03 31 DRAG TO LEFT FOR MORE ",
                     style: TextStyle(
                       color: Theme.of(context).disabledColor,
                       fontWeight: FontWeight.bold,

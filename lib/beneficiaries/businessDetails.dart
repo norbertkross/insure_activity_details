@@ -38,7 +38,7 @@ class _BusinessDetailsState extends State<BusinessDetails> {
           color: Theme.of(context).disabledColor,
         ),),
       leading: IconButton(icon: Icon(Icons.chevron_left_rounded,color: Theme.of(context).disabledColor,), 
-      onPressed: ()=>{},
+      onPressed: ()=>{Navigator.pop(context)},
       ),
       ),
       body: NotificationListener<OverscrollIndicatorNotification>(
