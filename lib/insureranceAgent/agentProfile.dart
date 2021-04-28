@@ -182,7 +182,7 @@ List optionItems = [
                             child: CircularProgressIndicator(
                               strokeWidth: 10.0,
                               value: .75,
-                              backgroundColor: Theme.of(context).disabledColor,
+                              backgroundColor: Theme.of(context).disabledColor.withOpacity(.08),
                               valueColor: AlwaysStoppedAnimation<Color>(Color(0xff12f717)),
                             ),
                             ),
@@ -357,7 +357,7 @@ List optionItems = [
                     borderRadius: BorderRadius.circular(10.0),
                   ),                  
                     child: Container(
-                      width: 120,
+                      width: 100,
                       decoration: BoxDecoration(
                         // color: Colors.red,
                       ),

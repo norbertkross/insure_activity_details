@@ -10,6 +10,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  //Color(0xFF2D8F30);
+  //Color(0xFFF66973);
+  //Color(0xFFD9B84A);
+  //Color(0xFF4D9BCF);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
